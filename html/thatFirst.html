@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<!-- 
+   Doctype is going to tell the browser what kind of 
+   document it is. 
+
+   What is an ide?
+        Integrated Development Enviroment
+        It is made to make our job easier and 
+        more efficient.
+ -->
+<html>
+  <!-- 
+        html tag:
+            it is going to be the root of the html document
+            so, everything we put in our document is 
+            going to be inside of these tags
+     -->
+  <!--
+        this is a comment
+        Whenever you have a comment in your code
+        The browser/compiler/whatever it is
+        will ignore it.
+    -->
+  <!--
+        all notes from this class will be in the comments
+        So i needed to tell you guys what a comment
+        was so I could notes in the code yall
+
+    -->
+  <head>
+    <!-- head:
+                head is going to hold meta data or information
+                about the file
+        -->
+    <title>This is our awesome web page</title>
+    <!-- lets give the browser more info -->
+    <meta charset="UTF-8" />
+    <!-- <meta charset="ISO-8859-5"> -->
+  </head>
+  <body>
+    <h1>this is a header</h1>
+    <!-- We have tags such as <h1> and we have html
+            elements. elements are:
+            <h1>content</h1> -->
+    <h2>this is another header</h2>
+    <h3>What? another header</h3>
+    <h4>When does it end?</h4>
+    <div>
+      <h5>how high does this go?</h5>
+      <h6>only here, this is it</h6>
+    </div>
+    <!-- These are known as block elements.
+        they end with a line break
+    The opposite: inline elements do not
+            we will see so shortly -->
+    <!-- 
+            body:
+                this is the actual part that shows up in the 
+                browser.
+         -->
+    <!-- br*50
+        an example of what an ide can do -->
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+      aliquet massa sit amet velit aliquet, sed dapibus augue gravida. Morbi eu
+      odio quis libero egestas vehicula. Maecenas scelerisque aliquet bibendum.
+      Integer in enim at enim auctor eleifend. Nulla auctor vestibulum sodales.
+      Vivamus feugiat nulla ut nibh pharetra, vitae ornare ipsum tincidunt. Sed
+      volutpat rhoncus turpis a volutpat. Curabitur vitae nisi quis quam
+      consequat fermentum at ac ante. Curabitur id sodales augue, ac vehicula
+      dolor. Vivamus pellentesque purus et lectus sodales bibendum. Cras posuere
+      massa vitae lectus bibendum vestibulum. Phasellus rutrum lectus eu mollis
+      placerat. Fusce convallis metus quis diam porttitor, nec sagittis sapien
+      laoreet. Fusce facilisis lacus in nisi tincidunt, eu iaculis magna
+      faucibus. Phasellus maximus iaculis justo, ut tempus velit tristique
+      tempor.
+    </p>
+    <a href="https://www.lipsum.com/feed/html">
+      https://www.lipsum.com/feed/html</a
+    >
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <!-- 
+    html attributes change the behavior and appearance of
+        an element
+ -->
+    <form
+      action="the url to send the information"
+      method="http method to send the information"
+    >
+      <input type="text" placeholder="this is an input field" />
+      <br />
+      <input type="password" placeholder="this is the password spot" />
+      <br />
+      <input type="radio" name="cereal" value="cereal first" />
+      Cereal First, then milk
+      <br />
+      <input type="radio" name="cereal" value="milk first" />
+      Milk first, then cereal...because youre an animal
+      <input type="submit" value="this is how we submit it" />
+      <br />
+      I have a pen: <input type="checkbox" value="pen" /> I have an apple:
+      <input type="checkbox" value="apple" /> I have an apple~pen:
+      <input type="checkbox" value="applepen" />
+    </form>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <ul title="these are my junk cars not in order">
+      these are my junk cars not in order
+      <li>
+        <!-- this is known as child tags -->
+        ford
+      </li>
+      <li>
+        chevy
+      </li>
+      <li>
+        dodge
+      </li>
+      <li>
+        toyota
+      </li>
+    </ul>
+    <ol>
+      these are my junk cars in order
+      <li>
+        <!-- this is known as child tags -->
+        ford
+      </li>
+      <li>
+        chevy
+      </li>
+      <li>
+        dodge
+      </li>
+      <li>
+        toyota
+      </li>
+    </ol>
+
+    <table>
+      <tr>
+        <th>
+          Heading 1
+        </th>
+        <th>
+          Heading 2
+        </th>
+      </tr>
+      <tr>
+        <td>
+          Row1, Column1
+        </td>
+        <td>
+          Row1, Column2
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Row2, Column1
+        </td>
+        <td>
+          Row2, Column2
+        </td>
+      </tr>
+    </table>
+
+    <br />
+    <textarea rows="30" cols="40">
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            aliquet massa sit amet velit aliquet, sed dapibus augue gravida. Morbi eu
+            odio quis libero egestas vehicula. Maecenas scelerisque aliquet bibendum.
+            Integer in enim at enim auctor eleifend. Nulla auctor vestibulum sodales.
+            Vivamus feugiat nulla ut nibh pharetra, vitae ornare ipsum tincidunt. Sed
+            volutpat rhoncus turpis a volutpat. Curabitur vitae nisi quis quam
+            consequat fermentum at ac ante. Curabitur id sodales augue, ac vehicula
+            dolor. Vivamus pellentesque purus et lectus sodales bibendum. Cras posuere
+            massa vitae lectus bibendum vestibulum. Phasellus rutrum lectus eu mollis
+            placerat. Fusce convallis metus quis diam porttitor, nec sagittis sapien
+            laoreet. Fusce facilisis lacus in nisi tincidunt, eu iaculis magna
+            faucibus. Phasellus maximus iaculis justo, ut tempus velit tristique
+            tempor.</textarea
+    >
+    <br />
+    <a
+      href="https://images-na.ssl-images-amazon.com/images/I/81D%2BXXEnHBL._SY445_.jpg"
+    >
+      <img
+        src="https://images-na.ssl-images-amazon.com/images/I/81D%2BXXEnHBL._SY445_.jpg"
+    /></a>
+    <iframe
+      height="400"
+      width="800"
+      src="https://www.lipsum.com/feed/html"
+    ></iframe>
+  </body>
+</html>
