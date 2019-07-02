@@ -1,0 +1,63 @@
+h3{
+    color:green;
+    /* font-size: 250px; */
+
+}
+/* css
+    what does it stand for?
+        Cascading Style Sheet
+    CSS syntax
+        [selector][curly brace][key-value pair][semicolon][end curly brace]
+
+    The reason it is cascading is because of a little 
+        thing called specificity
+    What this means is that it will style an element 
+        according to the  most specific style
+    Specificity goes in order:
+        Tag
+        Class
+        Id
+        Inline
+         */
+body{
+    color:yellow;
+    background-image: url("http://svite-league-apps-content.s3.amazonaws.com/bgimages/sports-wave.jpg")
+}
+/* we can specify class names with the "." */
+.needstoBeBlue{
+    color:blue;
+    text-align: center;
+    background-color: brown;
+}
+/* we can specify id's with the "#" */
+#outlined{
+    text-align: left;
+}
+table{
+    border-color: red;
+    padding:10px;
+    margin:75px;
+    border-width:50px;
+    border-style: groove
+}
+td{
+    padding: 100px
+
+}
+li{
+    color:red;
+}
+/* this is how you grab nested tags */
+div h5{
+    color:green;
+}
+div{
+    background-color: burlywood
+}
+/* this how you grab children */
+ol>li{
+    color:crimson
+}
+p, a{
+color:red;    
+}

@@ -28,23 +28,59 @@
 
     -->
   <head>
+    <!-- internal styling -->
+    <!-- <style>
+    h3{
+      color:green;
+    }
+    </style> -->
     <!-- head:
                 head is going to hold meta data or information
                 about the file
         -->
+    <!-- this is known as external styling -->
+    <link rel="stylesheet" type="text/css" href="../css/mystyles.css" />
     <title>This is our awesome web page</title>
     <!-- lets give the browser more info -->
     <meta charset="UTF-8" />
     <!-- <meta charset="ISO-8859-5"> -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <h1>this is a header</h1>
+    <!-- this is inline styling -->
+    <h1 style="color:red">this is a header</h1>
     <!-- We have tags such as <h1> and we have html
             elements. elements are:
             <h1>content</h1> -->
-    <h2>this is another header</h2>
-    <h3>What? another header</h3>
-    <h4>When does it end?</h4>
+    <h2 class="needstoBeBlue">this is another header</h2>
+    <h3 class="needstoBeBlue">What? another header</h3>
+    <h4
+      class="needstoBeBlue"
+      id="outlined"
+      style="color:cornsilk; text-align:end"
+    >
+      When does it end?
+    </h4>
     <div>
       <h5>how high does this go?</h5>
       <h6>only here, this is it</h6>
@@ -75,9 +111,7 @@
       faucibus. Phasellus maximus iaculis justo, ut tempus velit tristique
       tempor.
     </p>
-    <a href="https://www.lipsum.com/feed/html">
-      https://www.lipsum.com/feed/html</a
-    >
+    <a href="./another.html"> https://www.lipsum.com/feed/html</a>
     <br />
     <br />
     <br />
@@ -112,7 +146,7 @@
     <br />
     <br />
     <br />
-    <ul title="these are my junk cars not in order">
+    <ul title="these are my junk cars not in order this is a tooltip">
       these are my junk cars not in order
       <li>
         <!-- this is known as child tags -->
@@ -145,7 +179,7 @@
       </li>
     </ol>
 
-    <table>
+    <table border="5">
       <tr>
         <th>
           Heading 1
@@ -200,5 +234,15 @@
       width="800"
       src="https://www.lipsum.com/feed/html"
     ></iframe>
+    <br />
+    <video width="320" height="240" controls>
+      <!-- this is an example of an absolute file path -->
+      <source
+        src="C:\Users\Revature\Downloads\SampleVideo_1280x720_1mb.mp4"
+        type="video/mp4"
+      />
+      <!-- this is an example of a relative file path -->
+      <source src="../../../../Downloads/SampleVideo_1280x720_1mb.mp4" />
+    </video>
   </body>
 </html>
