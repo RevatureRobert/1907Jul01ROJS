@@ -328,7 +328,7 @@ let boat = {
   float: true,
   numOfHoles: 0,
   drive: function() {
-      //template literal
+    //template literal
     return `we have \n \t ${this.numOfHoles} holes in this boat and 
     are thinking of drilling more`;
   },
@@ -348,16 +348,64 @@ let boat = {
 //boat using the dot operator "."
 //we can also use subscript notation "['']"
 
-
 //we can use string cancatenation to bring the string
 //to the next line
-let myString ="this is a super long "+
-"string. it is so long that I have to take "+
-"it to the next lines with string concatenation";
+let myString =
+  "this is a super long " +
+  "string. it is so long that I have to take " +
+  "it to the next lines with string concatenation";
 
 //we can use backticks to bring the string
 //to other lines without concatenation
-let myString2=`this is also a super long string,
+let myString2 = `this is also a super long string,
  but this time i do not have to 
 use string concatenation to bring it to
-the next line.`
+the next line.`;
+
+
+/* 
+Create a toystore object
+the toystore will have a number of states and behaviors
+    states:
+        name
+        is it in business (current?)
+        inventory []
+        inventory count
+    behaviors
+        get the inventory
+        list the inventory item by item
+        given a certain item, remove it from the inventory
+        add items to the inventory
+*/
+
+
+let toystore={
+    name:"toys r us",
+    current: false,
+    inventory: ["stuffed bear", "rc car"],
+    invCount: function (){
+        return this.inventory.length;
+    },
+    getInventory: function (){
+        this.invCount();
+        return this.inventory;
+    },
+    ListInv: function (){
+        for(let a of this.getInventory()){
+            console.log(a);
+        }
+    },
+    removeItem: function (item){
+        for(let a in this.getInventory()){
+            if(this.inventory[a]==item){
+                this.inventory.splice(a,1)
+            }
+        }this.invCount()
+    },
+    addItem: function(item){
+        this.inventory.push(item);
+        console.log(this.inventory);
+        this.invCount();
+    }
+
+}
