@@ -108,7 +108,7 @@ ternary operators
 // its used interchangeably?????
 
 //  if statement
-let userInput = "h";
+// let userInput = "h";
 // if (!userInput) {
 //   alert("bad input");
 // }
@@ -131,7 +131,6 @@ let userInput = "h";
 //       alert(userInput)
 //   }
 
-  
 //switch statement
 // let x=1;
 // switch(userInput){
@@ -157,7 +156,7 @@ for([declare variable][semicolon][check value (give stopping point)]
 // a for loop will run an operation a certain amount of times
 // for(var x =0; x<100;x++){
 //     console.log(x);
-// } 
+// }
 
 //I dont how many times i want to run an operation
 // let x=0
@@ -175,12 +174,12 @@ for([declare variable][semicolon][check value (give stopping point)]
 
 // another keyword for you to know
 //  function
-function myFunc2(){
-    return 2;
+function myFunc2() {
+  return 2;
 }
-function myFunc3(num){
-    // num2=2;
-    return num;
+function myFunc3(num) {
+  // num2=2;
+  return num;
 }
 // let x=myFunc3(3);
 //let var const and no keyword
@@ -199,61 +198,59 @@ function myFunc3(num){
 // var thisVar=3;      //global scope
 // thisVar=3               //global scope
 // let thisVar=3              //global scope
-const thisVar=3         //global scope
+const thisVar = 3; //global scope
 
-function newFunc(num){          //num scope?    function scope
+function newFunc(num) {
+  //num scope?    function scope
 
-    // itHappens=true;            //global scope
-    //const itHappens=true;   //function scope
-    // let itHappens=true          //function scope
-    var itHappens=true          //function scope
-    if(itHappens){
-        // panic='yes'             //global scope
-        // let panic= "yes"        //local scope
-        // const panic='yes'       //local scope
-        var panic='yes'         //function scope
-    }
-    console.log(panic);
+  // itHappens=true;            //global scope
+  //const itHappens=true;   //function scope
+  // let itHappens=true          //function scope
+  var itHappens = true; //function scope
+  if (itHappens) {
+    // panic='yes'             //global scope
+    // let panic= "yes"        //local scope
+    // const panic='yes'       //local scope
+    var panic = "yes"; //function scope
+  }
+  console.log(panic);
 }
 //  this is how you call a function (invoking a function) (function invocation)
 // newFunc(4);
 
-function myFunc4(){
-    for(let i=0; i<5;i++){}
-    for(var k=0; k<5; k++){
-        var a=2;
-    }
-    console.log(l);
-    var l =20;
+function myFunc4() {
+  for (let i = 0; i < 5; i++) {}
+  for (var k = 0; k < 5; k++) {
+    var a = 2;
+  }
+  console.log(l);
+  var l = 20;
 }
 // let a; a is undeclared
 // console.log(a);
 myFunc4();
 
+let thisvar = 2; //global
 
-
-
-
-let thisvar=2       //global
-
-
-function scopes(parameter){     //parameter is function scope
-    if(true){
-        let anothervar=2;       //local scope
-        console.log(parameter)      ///can I access this: yes i can
-        console.log(thisVar)        //can I access this: yes i can
-    }
-    console.log(thisVar)            //can I access this: yes I can
-    console.log(parameter)          //yes i can
-    console.log(anothervar)         //can I access? no it is local scope
+function scopes(parameter) {
+  //parameter is function scope
+  if (true) {
+    let anothervar = 2; //local scope
+    console.log(parameter); ///can I access this: yes i can
+    console.log(thisVar); //can I access this: yes i can
+  }
+  console.log(thisVar); //can I access this: yes I can
+  console.log(parameter); //yes i can
+  console.log(anothervar); //can I access? no it is local scope
 }
 
-function makeLoop(num){
-    if(num>0){
-        for(let k=0; k<=num; k++){
-            console.log(k)
-        }
+function makeLoop(num) {
+  if (num > 0) {
+    for (let k = 0; k <= num; k++) {
+      // return k;
+      console.log(k);
     }
+  }
 }
 
 //  what is an array
@@ -261,6 +258,106 @@ function makeLoop(num){
 //      each identified by an index
 //      arrays are indexed at 0
 //      you can grab elements by the syntax array[index_number]
-let newArr=[1,2,3];
 
 //  data structures give a way to store and retrieve data
+
+//gibbly gobbly goop
+///step 1
+///step 2
+/// step n
+
+/* function goop(){
+    step 1
+    step2
+    stepn
+    return [4,5];
+    console.log('hello');
+} */
+
+//gibbly gobbly goop()
+let newArr = [1, 2, 3, 3, 2, 5, 4, 6, 5, "w"];
+
+// for(let a=0; a<newArr.length; a++){
+//     console.log(newArr[a]);
+// }
+
+//this is known as a for of loop
+//  a for of loop will grab wach
+//  each element of an array
+function loopthrubetter(arr) {
+  for (let a of arr) {
+    console.log(a);
+  }
+}
+
+//this is a for in loop
+//  a for in loop will get the
+//  index of each element
+function loopthrubetter2(arr) {
+  for (let a in arr) {
+    console.log(a);
+  }
+}
+
+//tern=(myArr[1]=="my")?1:0
+/* 
+if(myArr[1]=='my'){
+    tern=1;
+}else{
+    tern=0;
+}
+
+if(myArr[2]=='my'){
+    tern=1;
+}else{
+    tern=0;
+}
+*/
+
+///////////////////Objects
+//An object is a set states and behaviors
+//The syntax for objects in js is:
+
+//This is known as JSON
+//JavaScript Object Notation
+//(ie foreshadowing)
+let boat = {
+  name: "SS Java...script",
+  color: "blue",
+  length: 30,
+  float: true,
+  numOfHoles: 0,
+  drive: function() {
+      //template literal
+    return `we have \n \t ${this.numOfHoles} holes in this boat and 
+    are thinking of drilling more`;
+  },
+  drillHole: function() {
+    this.float = false;
+    this.numOfHoles++;
+  },
+  patchHole: function() {
+    if (this.numOfHoles > 0) this.numOfHoles--;
+    if (this.numOfHoles == 0) {
+      this.float = true;
+    }
+  }
+};
+
+//we can access the properties of our
+//boat using the dot operator "."
+//we can also use subscript notation "['']"
+
+
+//we can use string cancatenation to bring the string
+//to the next line
+let myString ="this is a super long "+
+"string. it is so long that I have to take "+
+"it to the next lines with string concatenation";
+
+//we can use backticks to bring the string
+//to other lines without concatenation
+let myString2=`this is also a super long string,
+ but this time i do not have to 
+use string concatenation to bring it to
+the next line.`
