@@ -409,3 +409,5 @@ let toystore={
     }
 
 }
+
+console.log('the oage is connected');
