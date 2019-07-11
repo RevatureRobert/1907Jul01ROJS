@@ -10,31 +10,30 @@
         Synchronous, the work depends on other processes
 */
 
-document.getElementById("swsubmit")
-    .addEventListener("click", getSw);
+document.getElementById("swsubmit").addEventListener("click", getSw);
 
-function getSw(){
-    console.log("it works");
-    let swinfo=document.getElementById("swInfo").value;
-    console.log(swinfo)
+function getSw() {
+  console.log("it works");
+  let swinfo = document.getElementById("swInfo").value;
+  console.log(swinfo);
 
-    /* 
+  /* 
         Step 1
             The following object allows us to make
             requests and get back ddata. In short, this
             is our data retriever.
-    */    
+    */
 
-        let xhttp = new XMLHttpRequest();
+  let xhttp = new XMLHttpRequest();
 
-        //Step 2
-        xhttp.onreadystatechange = function(){
-            console.log(xhttp.readyState);
-            console.log(xhttp.status)
-            if(xhttp.readyState==4 && xhttp.status==200){
-                console.log(xhttp.responseText)
-            }
-/* 
+  //Step 2
+  xhttp.onreadystatechange = function() {
+    console.log(xhttp.readyState);
+    console.log(xhttp.status);
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      console.log(xhttp.responseText);
+
+      /* 
             The ready state is going to tell us about the
             state of our request
                 0=request not initialized
@@ -62,54 +61,54 @@ function getSw(){
                 JSON is easier to parse than XML
 
 */
-            let sw = JSON.parse(xhttp.responseText);
-            // console.log(sw)
-            // console.log(typeof sw)
-            // console.log(typeof xhttp.responseText)
-            console.log(xhttp.getAllResponseHeaders())
-            setValues(sw)
-            getJoke()
-        }
+      let sw = JSON.parse(xhttp.responseText);
+      // console.log(sw)
+      // console.log(typeof sw)
+      // console.log(typeof xhttp.responseText)
+      console.log(xhttp.getAllResponseHeaders());
+      setValues(sw);
+      getJoke();
+    }
+  };
 
-        //Step 3
-        //Create a connection
-        //open(http method, url)
-        //open(http method, url, asynchronous)
-        xhttp.open("GET", 'https://swapi.co/api/people/'+swinfo, true);
-        xhttp.setRequestHeader("Host","hostUrl")
-        //Step 4
-        //To send the request
-        xhttp.send()
+  //Step 3
+  //Create a connection
+  //open(http method, url)
+  //open(http method, url, asynchronous)
+  xhttp.open("GET", "https://swapi.co/api/people/" + swinfo, true);
+//   xhttp.setRequestHeader("Host", "hostUrl");
+  //Step 4
+  //To send the request
+  xhttp.send();
 }
 
-function setValues(obj){
-    let swName=document.getElementById("swName");
-    swName.innerHTML=obj.name
+function setValues(obj) {
+  let swName = document.getElementById("swName");
+  swName.innerHTML = obj.name;
 }
 
+function getJoke() {
+  console.log("it works");
+  let swinfo = document.getElementById("swInfo").value;
+  console.log(swinfo);
 
-function getJoke(){
-    console.log("it works");
-    let swinfo=document.getElementById("swInfo").value;
-    console.log(swinfo)
-
-    /* 
+  /* 
         Step 1
             The following object allows us to make
             requests and get back ddata. In short, this
             is our data retriever.
-    */    
+    */
 
-        let xhttp = new XMLHttpRequest();
+  let xhttp = new XMLHttpRequest();
 
-        //Step 2
-        xhttp.onreadystatechange = function(){
-            console.log(xhttp.readyState);
-            console.log(xhttp.status)
-            if(xhttp.readyState==4 && xhttp.status==200){
-                console.log(xhttp.responseText)
-            }
-/* 
+  //Step 2
+  xhttp.onreadystatechange = function() {
+    console.log(xhttp.readyState);
+    console.log(xhttp.status);
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      console.log(xhttp.responseText);
+
+      /* 
             The ready state is going to tell us about the
             state of our request
                 0=request not initialized
@@ -137,24 +136,25 @@ function getJoke(){
                 JSON is easier to parse than XML
 
 */
-            let sw = JSON.parse(xhttp.responseText);
-            // console.log(sw)
-            // console.log(typeof sw)
-            // console.log(typeof xhttp.responseText)
-            setJoke(sw)
-        }
+      let sw = JSON.parse(xhttp.responseText);
+      // console.log(sw)
+      // console.log(typeof sw)
+      // console.log(typeof xhttp.responseText)
+      setJoke(sw);
+    }
+  };
 
-        //Step 3
-        //Create a connection
-        //open(http method, url)
-        xhttp.open("GET", 'http://api.icndb.com/jokes/random', true);
+  //Step 3
+  //Create a connection
+  //open(http method, url)
+  xhttp.open("GET", "http://api.icndb.com/jokes/random", true);
 
-        //Step 4
-        //To send the request
-        xhttp.send()
+  //Step 4
+  //To send the request
+  xhttp.send();
 }
 
-function setJoke(obj){
-    let swName=document.getElementById("joke");
-    swName.innerHTML=obj.value.joke
+function setJoke(obj) {
+  let swName = document.getElementById("joke");
+  swName.innerHTML = obj.value.joke;
 }
